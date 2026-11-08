@@ -16,9 +16,9 @@ export interface ProgramItem {
 
 export const siteConfig = {
   brand: {
-    name: 'LINGUA PRO ACADEMY',
-    fullName: 'Lingua Pro English Academy',
-    shortName: 'Lingua Pro',
+    name: 'NAMA BRAND',
+    fullName: 'Nama Brand',
+    shortName: 'Nama Brand',
     tagline: 'Tingkatkan Percaya Diri Berbicara Bahasa Inggris & Raih Target Skor IELTS.',
     philosophy: "English is not just a language. It's your next opportunity.",
     subTagline: 'Your English Journey Starts Here.',
@@ -29,8 +29,8 @@ export const siteConfig = {
     address: 'Ruko Emerald Avenue, BSD City, Tangerang Selatan, Banten 15345, Indonesia',
     phone: '+62 812-9000-2841',
     whatsappRaw: '6281290002841',
-    email: 'admissions@linguapro.example',
-    website: 'https://www.linguapro.example',
+    email: 'info@namabrand.example',
+    website: 'https://www.namabrand.example',
     hours: {
       weekday: 'Senin – Jumat: 08.00 – 20.00 WIB',
       saturday: 'Sabtu: 09.00 – 17.00 WIB',
@@ -38,16 +38,16 @@ export const siteConfig = {
     },
     socials: {
       instagram: {
-        handle: '@linguapro.academy',
-        url: 'https://instagram.com/linguapro.academy',
+        handle: '@namabrand',
+        url: 'https://instagram.com/namabrand',
       },
       tiktok: {
-        handle: '@linguaproenglish',
-        url: 'https://tiktok.com/@linguaproenglish',
+        handle: '@namabrand',
+        url: 'https://tiktok.com/@namabrand',
       },
       linkedin: {
-        handle: 'Lingua Pro Academy',
-        url: 'https://linkedin.com/company/lingua-pro-academy',
+        handle: 'Nama Brand',
+        url: 'https://linkedin.com/company/nama-brand',
       },
     },
   },
@@ -156,7 +156,7 @@ export const siteConfig = {
 
 export function buildWhatsAppLink(message?: string): string {
   const defaultText =
-    'Halo Tim Admissions Lingua Pro Academy, saya ingin berkonsultasi mengenai program kursus dan jadwal diagnostic test gratis.'
+    'Halo Tim Admissions Nama Brand, saya ingin berkonsultasi mengenai program kursus dan jadwal diagnostic test gratis.'
   const text = encodeURIComponent(message || defaultText)
   return `https://wa.me/${siteConfig.contact.whatsappRaw}?text=${text}`
 }

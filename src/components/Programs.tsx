@@ -78,7 +78,7 @@ export const Programs: React.FC = () => {
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <motion.a
-                  href={buildWhatsAppLink('Halo Lingua Pro Academy, saya tertarik mendaftar program IELTS Intensive Prep. Mohon info jadwal kelas terdekat.')}
+                  href={buildWhatsAppLink('Halo Nama Brand, saya tertarik mendaftar program IELTS Intensive Prep. Mohon info jadwal kelas terdekat.')}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
@@ -90,7 +90,7 @@ export const Programs: React.FC = () => {
                 </motion.a>
 
                 <motion.a
-                  href={buildWhatsAppLink('Halo Lingua Pro, saya ingin konsultasi strategi skor IELTS dan diagnostic test terlebih dahulu.')}
+                  href={buildWhatsAppLink('Halo Nama Brand, saya ingin konsultasi strategi skor IELTS dan diagnostic test terlebih dahulu.')}
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
@@ -199,7 +199,7 @@ export const Programs: React.FC = () => {
             <div className="pt-4 border-t border-[#E3E1DA] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
               <span className="text-xs text-[#737C87]">Kelas Tatap Muka & Online</span>
               <motion.a
-                href={buildWhatsAppLink('Halo Lingua Pro Academy, saya tertarik mendaftar program Workplace Business English.')}
+                href={buildWhatsAppLink('Halo Nama Brand, saya tertarik mendaftar program Workplace Business English.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
@@ -264,7 +264,7 @@ export const Programs: React.FC = () => {
             <div className="pt-4 border-t border-[#E3E1DA] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
               <span className="text-xs text-[#737C87]">Jadwal Fleksibel (1 Tutor 1 Siswa)</span>
               <motion.a
-                href={buildWhatsAppLink('Halo Lingua Pro Academy, saya ingin memesan sesi 1-on-1 Speaking Private Coaching.')}
+                href={buildWhatsAppLink('Halo Nama Brand, saya ingin memesan sesi 1-on-1 Speaking Private Coaching.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}

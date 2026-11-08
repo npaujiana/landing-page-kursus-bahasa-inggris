@@ -17,11 +17,11 @@ export const Footer: React.FC = () => {
           {/* Brand Info (Cols 1-5) */}
           <div className="lg:col-span-5">
             <div className="flex items-center gap-2.5 mb-3">
-              <div className="w-7 h-7 rounded-xs bg-[#121E2C] text-white font-serif font-bold text-sm flex items-center justify-center">
-                L
+              <div className="w-7 h-7 rounded-xs bg-[#121E2C] text-white font-serif font-bold text-xs flex items-center justify-center tracking-tighter">
+                NB
               </div>
               <span className="font-serif text-lg font-bold tracking-tight text-[#121E2C]">
-                Lingua Pro Academy
+                Nama Brand
               </span>
             </div>
 

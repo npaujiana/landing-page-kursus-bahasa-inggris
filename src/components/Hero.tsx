@@ -54,7 +54,7 @@ export const Hero: React.FC = () => {
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto mb-10 sm:mb-12"
             >
               <motion.a
-                href={buildWhatsAppLink('Halo Lingua Pro Academy, saya ingin berkonsultasi mengenai program kursus dan mengambil Free Diagnostic Test.')}
+                href={buildWhatsAppLink('Halo Nama Brand, saya ingin berkonsultasi mengenai program kursus dan mengambil Free Diagnostic Test.')}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
@@ -127,14 +127,14 @@ export const Hero: React.FC = () => {
               <div className="relative overflow-hidden bg-[#F4F3EF] rounded-xs">
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80"
-                  alt="Sesi diskusi dan presentasi profesional di Lingua Pro Academy"
+                  alt="Sesi diskusi dan presentasi profesional di Nama Brand"
                   className="w-full h-[280px] sm:h-[400px] md:h-[480px] object-cover transition-transform duration-700 group-hover:scale-102"
                   loading="eager"
                 />
               </div>
 
               <div className="p-3 pt-3.5 flex flex-col sm:flex-row sm:items-center justify-between text-[11px] text-[#4A525D] border-t border-[#E3E1DA]/80 mt-2 gap-1 sm:gap-0">
-                <span>Lingua Pro Academy • BSD City Campus</span>
+                <span>Nama Brand • BSD City Campus</span>
                 <span className="font-mono text-[#121E2C] font-semibold">Est. 2021</span>
               </div>
             </div>

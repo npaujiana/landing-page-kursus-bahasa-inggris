@@ -14,7 +14,7 @@ export const FAQ: React.FC = () => {
 
   const faqs: FAQItem[] = [
     {
-      q: 'Apakah Lingua Pro Academy menyediakan kelas online dan offline?',
+      q: 'Apakah Nama Brand menyediakan kelas online dan offline?',
       a: 'Ya, kami menerapkan sistem pembelajaran hybrid. Anda dapat mengikuti kelas tatap muka langsung di kampus kami di Ruko Emerald Avenue, BSD City, Tangerang Selatan, maupun mengikuti kelas daring interaktif dari mana saja di Indonesia.',
       category: 'general',
     },
@@ -45,7 +45,7 @@ export const FAQ: React.FC = () => {
     },
     {
       q: 'Apakah tersedia tutor dengan sertifikasi Cambridge CELTA?',
-      a: 'Ya, Lingua Pro Academy memiliki instruktur yang berkualifikasi Cambridge CELTA guna menjamin standar pedagogi pengajaran Bahasa Inggris internasional yang teruji dan bermutu.',
+      a: 'Ya, Nama Brand memiliki instruktur yang berkualifikasi Cambridge CELTA guna menjamin standar pedagogi pengajaran Bahasa Inggris internasional yang teruji dan bermutu.',
       category: 'method',
     },
     {
@@ -60,7 +60,7 @@ export const FAQ: React.FC = () => {
     },
     {
       q: 'Apakah tersedia sertifikat setelah menyelesaikan program?',
-      a: 'Ya, peserta yang telah menyelesaikan seluruh rangkaian program dan memenuhi kriteria evaluasi akan menerima sertifikat resmi (Certificate of Completion) dari Lingua Pro Academy.',
+      a: 'Ya, peserta yang telah menyelesaikan seluruh rangkaian program dan memenuhi kriteria evaluasi akan menerima sertifikat resmi (Certificate of Completion) dari Nama Brand.',
       category: 'general',
     },
     {
@@ -100,7 +100,7 @@ export const FAQ: React.FC = () => {
             Hal yang sering ditanyakan mengenai program dan pendaftaran.
           </h2>
           <p className="text-sm sm:text-base text-[#4A525D] leading-relaxed">
-            Informasi lengkap seputar metode pembelajaran, kualifikasi pengajar, serta jadwal kelas Lingua Pro Academy.
+            Informasi lengkap seputar metode pembelajaran, kualifikasi pengajar, serta jadwal kelas Nama Brand.
           </p>
 
           {/* Search Box */}

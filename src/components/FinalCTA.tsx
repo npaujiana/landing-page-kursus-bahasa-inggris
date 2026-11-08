@@ -29,7 +29,7 @@ export const FinalCTA: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
             <motion.a
-              href={buildWhatsAppLink('Halo Admissions Lingua Pro, saya ingin mengikuti Free Diagnostic Test dan konsultasi program.')}
+              href={buildWhatsAppLink('Halo Admissions Nama Brand, saya ingin mengikuti Free Diagnostic Test dan konsultasi program.')}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
@@ -43,7 +43,7 @@ export const FinalCTA: React.FC = () => {
             </motion.a>
 
             <motion.a
-              href={buildWhatsAppLink('Halo Admissions Lingua Pro, saya ingin berkonsultasi mengenai rekomendasi program dan jadwal kelas.')}
+              href={buildWhatsAppLink('Halo Admissions Nama Brand, saya ingin berkonsultasi mengenai rekomendasi program dan jadwal kelas.')}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}

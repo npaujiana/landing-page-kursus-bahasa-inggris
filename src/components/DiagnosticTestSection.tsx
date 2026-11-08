@@ -96,7 +96,7 @@ export const DiagnosticTestSection: React.FC = () => {
 
           <div className="shrink-0 w-full sm:w-auto">
             <motion.a
-              href={buildWhatsAppLink('Halo Admissions Lingua Pro Academy, saya ingin mengklaim Free Diagnostic Test untuk pemetaan level Bahasa Inggris saya.')}
+              href={buildWhatsAppLink('Halo Admissions Nama Brand, saya ingin mengklaim Free Diagnostic Test untuk pemetaan level Bahasa Inggris saya.')}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}

@@ -88,7 +88,7 @@ export const LearningApproach: React.FC = () => {
             <div className="border border-[#E3E1DA] p-2 bg-[#FBFBFA] rounded-xs shadow-xs hover:shadow-md transition-shadow">
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
-                alt="Suasana kolaboratif dan suportif di kelas Lingua Pro Academy"
+                alt="Suasana kolaboratif dan suportif di kelas Nama Brand"
                 className="w-full h-[260px] sm:h-[360px] md:h-[420px] object-cover"
                 loading="lazy"
               />

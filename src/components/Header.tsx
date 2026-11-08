@@ -93,14 +93,14 @@ export const Header: React.FC = () => {
           href="#hero"
           onClick={(e) => handleNavClick(e, '#hero', 'hero')}
           className="flex items-center gap-2.5 group focus-visible:outline-hidden py-1 min-h-[44px]"
-          aria-label="Lingua Pro Academy Home"
+          aria-label="Nama Brand Home"
         >
-          <div className="w-8 h-8 rounded-full bg-[#121E2C] text-white font-serif font-bold text-sm flex items-center justify-center transition-transform group-hover:scale-105 shrink-0">
-            L
+          <div className="w-8 h-8 rounded-full bg-[#121E2C] text-white font-serif font-bold text-xs flex items-center justify-center transition-transform group-hover:scale-105 shrink-0 tracking-tighter">
+            NB
           </div>
           <div className="flex flex-col">
             <span className="font-serif text-base sm:text-lg font-bold tracking-tight text-[#121E2C] leading-none">
-              Lingua Pro
+              Nama Brand
             </span>
             <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-[#737C87] mt-0.5 font-medium">
               English Academy

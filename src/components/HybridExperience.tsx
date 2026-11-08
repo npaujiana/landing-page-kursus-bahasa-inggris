@@ -114,7 +114,7 @@ export const HybridExperience: React.FC = () => {
           </div>
 
           <motion.a
-            href={buildWhatsAppLink('Halo Lingua Pro, saya ingin informasi konsultasi tatap muka di kampus BSD City.')}
+            href={buildWhatsAppLink('Halo Nama Brand, saya ingin informasi konsultasi tatap muka di kampus BSD City.')}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
