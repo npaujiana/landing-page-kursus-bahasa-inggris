@@ -1,0 +1,119 @@
+/* Hallmark & GrooWeb Modern Animation Standards */
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #121e2c;
+  --color-ink-light: #202e3f;
+  --color-paper: #fbfbfa;
+  --color-paper-pure: #ffffff;
+  --color-surface-soft: #f4f3ef;
+  --color-surface-hover: #eceae3;
+  --color-hairline: #e3e1da;
+  --color-hairline-strong: #cac6ba;
+  --color-text-main: #121e2c;
+  --color-text-muted: #4a525d;
+  --color-text-subtle: #737c87;
+  --color-accent: #9c7a3c;
+  --color-accent-hover: #82642d;
+  --color-accent-subtle: #f6f1e8;
+
+  --font-serif: "Newsreader", Garamond, Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html, body {
+    overflow-x: clip;
+    background-color: var(--color-paper);
+    color: var(--color-text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    letter-spacing: normal;
+  }
+
+  h1, h2, h3, h4, .font-editorial {
+    font-family: var(--font-serif);
+    font-feature-settings: "cv01", "cv02";
+    text-wrap: balance;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Accessible instant focus indicator */
+  :focus-visible {
+    outline: 2px solid var(--color-ink);
+    outline-offset: 2px;
+  }
+}
+
+/* Modern Animations (GrooWeb Style) */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes ambientPulse {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.65;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-400 {
+  animation-delay: 400ms;
+}
+
+.animate-ambient-glow {
+  animation: ambientPulse 7s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: floatGentle 3.5s ease-in-out infinite;
+}
+
+/* Fallback for prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

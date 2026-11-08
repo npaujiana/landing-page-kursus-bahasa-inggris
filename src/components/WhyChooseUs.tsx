@@ -1,0 +1,94 @@
+import React from 'react'
+
+export const WhyChooseUs: React.FC = () => {
+  const differentiators = [
+    {
+      title: 'Cambridge CELTA Certified Tutors',
+      desc: 'Pengajaran berstandar internasional didampingi instruktur berkualifikasi Cambridge CELTA dengan pengalaman nyata mengajar peserta Indonesia.',
+    },
+    {
+      title: 'Native English Speaker Sessions',
+      desc: 'Peluang berinteraksi langsung dengan penutur asli untuk membiasakan telinga terhadap aksen internasional, ekspresi natural, dan idiom modern.',
+    },
+    {
+      title: 'Real-World Simulation Approach',
+      desc: 'Latihan difokuskan pada studi kasus praktis: wawancara kerja, rapat lintas negara, presentasi ke dewan direksi, dan strategi menjawab soal IELTS.',
+    },
+    {
+      title: 'Free Online Diagnostic Test',
+      desc: 'Tes diagnostik tanpa biaya untuk mengetahui level kemampuan riil sebelum memutuskan untuk bergabung dalam kelas berbayar.',
+    },
+    {
+      title: 'Personalized Study Plan',
+      desc: 'Materi dan target waktu disesuaikan dengan kebutuhan individu dan tujuan spesifik, bukan kurikulum massal yang kaku.',
+    },
+    {
+      title: 'Measurable Performance Tracking',
+      desc: 'Evaluasi berkala menggunakan rubrik standar resmi dan feedback personal tertulis untuk setiap tugas Writing dan Speaking.',
+    },
+  ]
+
+  return (
+    <section id="why-us" className="py-20 md:py-28 bg-[#FBFBFA] border-b border-[#E3E1DA]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Section Header */}
+        <div className="max-w-2xl mb-14">
+          <div className="text-xs font-semibold text-[#9C7A3C] uppercase tracking-wider mb-2">
+            Keunggulan Akademi
+          </div>
+          <h2 className="font-serif text-3xl sm:text-4xl text-[#121E2C] tracking-tight leading-tight mb-4 font-normal">
+            Standar pengajaran tinggi untuk hasil yang dapat dipertanggungjawabkan.
+          </h2>
+          <p className="text-sm sm:text-base text-[#4A525D] leading-relaxed">
+            Fokus kami adalah membantu setiap peserta mencapai target akademik dan profesional mereka secara terukur dan realistis.
+          </p>
+        </div>
+
+        {/* 6 Differentiators in Structured Editorial Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+          {differentiators.map((diff, index) => (
+            <div
+              key={index}
+              className="bg-[#FFFFFF] border border-[#E3E1DA] rounded-xs p-6 flex flex-col justify-between"
+            >
+              <div>
+                <span className="text-xs font-mono text-[#9C7A3C] block mb-2 tabular-nums">
+                  0{index + 1}
+                </span>
+                <h3 className="font-serif text-lg font-bold text-[#121E2C] mb-2 leading-snug">
+                  {diff.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-[#4A525D] leading-relaxed">
+                  {diff.desc}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Academic Director Quote Block */}
+        <div className="border border-[#121E2C] bg-[#121E2C] text-[#FBFBFA] p-8 sm:p-10 rounded-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div className="max-w-2xl">
+            <p className="font-serif text-xl sm:text-2xl text-[#FBFBFA] font-normal leading-relaxed mb-3">
+              &ldquo;Kemampuan Bahasa Inggris bukan sekadar penguasaan tata bahasa di atas kertas, melainkan jembatan yang menghubungkan Anda dengan peluang global selanjutnya.&rdquo;
+            </p>
+            <div className="text-xs text-[#CAC6BA]">
+              Adrian Pratama — Founder & Academic Director, Lingua Pro Academy
+            </div>
+          </div>
+
+          <div className="text-right shrink-0">
+            <span className="text-xs font-mono text-[#9C7A3C] uppercase tracking-wider block">
+              BSD City Campus
+            </span>
+            <span className="text-xs text-[#CAC6BA] mt-1 block">
+              Tangerang Selatan, Banten
+            </span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  )
+}
