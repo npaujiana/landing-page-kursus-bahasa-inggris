@@ -31,8 +31,8 @@ export const LearningProcess: React.FC = () => {
   ]
 
   return (
-    <section className="py-20 md:py-28 bg-[#FBFBFA] border-b border-[#E3E1DA]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+    <section className="py-16 sm:py-20 md:py-28 bg-[#FBFBFA] border-b border-[#E3E1DA]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header */}
         <motion.div

@@ -27,8 +27,8 @@ export const Testimonials: React.FC = () => {
   ]
 
   return (
-    <section id="testimonials" className="py-20 md:py-28 bg-[#FFFFFF] border-b border-[#E3E1DA]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+    <section id="testimonials" className="py-16 sm:py-20 md:py-28 bg-[#FFFFFF] border-b border-[#E3E1DA]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header */}
         <motion.div
@@ -58,7 +58,7 @@ export const Testimonials: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="border-l border-[#E3E1DA] pl-6 flex flex-col justify-between"
+              className="border-l border-[#E3E1DA] pl-4 sm:pl-6 flex flex-col justify-between"
             >
               <div>
                 <p className="font-serif text-base sm:text-lg text-[#121E2C] italic leading-relaxed mb-6 font-normal">

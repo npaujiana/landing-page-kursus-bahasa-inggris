@@ -4,7 +4,7 @@ import { buildWhatsAppLink } from '../config/siteConfig'
 
 export const FloatingWhatsApp: React.FC = () => {
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
       <motion.div
         animate={{ y: [0, -5, 0] }}
         transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
@@ -15,12 +15,12 @@ export const FloatingWhatsApp: React.FC = () => {
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="inline-flex items-center gap-2.5 px-5 py-3 rounded-full bg-[#25D366] text-white font-semibold text-xs sm:text-sm shadow-[0_8px_24px_rgba(37,211,102,0.35)] hover:shadow-[0_12px_28px_rgba(37,211,102,0.5)] transition-shadow duration-200 group"
+          className="inline-flex items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-3 rounded-full bg-[#25D366] text-white font-semibold text-xs sm:text-sm shadow-[0_8px_24px_rgba(37,211,102,0.35)] hover:shadow-[0_12px_28px_rgba(37,211,102,0.5)] transition-shadow duration-200 group min-h-[44px]"
           aria-label="Konsultasi WhatsApp"
         >
           {/* WhatsApp Icon */}
           <svg
-            className="w-5 h-5 fill-current shrink-0 transition-transform group-hover:scale-110 duration-200"
+            className="w-4 h-4 sm:w-5 sm:h-5 fill-current shrink-0 transition-transform group-hover:scale-110 duration-200"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
           >

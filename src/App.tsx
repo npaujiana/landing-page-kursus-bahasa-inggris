@@ -16,7 +16,7 @@ import { FloatingWhatsApp } from './components/FloatingWhatsApp'
 
 export function App() {
   return (
-    <div className="min-h-screen bg-[#FBFBFA] text-[#121E2C] font-sans flex flex-col selection:bg-[#9C7A3C]/20 selection:text-[#121E2C]">
+    <div className="min-h-screen bg-[#FBFBFA] text-[#121E2C] font-sans flex flex-col selection:bg-[#9C7A3C]/20 selection:text-[#121E2C] overflow-x-clip w-full max-w-full">
       {/* 01. Floating Pill Navbar (Karviz Inspired) */}
       <Header />
 

@@ -15,13 +15,13 @@ export const Hero: React.FC = () => {
   }
 
   return (
-    <section id="hero" className="relative pt-32 pb-20 md:pt-44 md:pb-28 overflow-hidden">
+    <section id="hero" className="relative pt-28 pb-16 md:pt-44 md:pb-28 overflow-hidden">
       
       {/* Background Soft Ambient Light */}
-      <div className="absolute top-1/4 left-1/3 w-[500px] h-[500px] bg-[#9C7A3C]/5 rounded-full blur-[120px] pointer-events-none -z-10 animate-ambient-glow" />
+      <div className="absolute top-1/4 left-1/3 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-[#9C7A3C]/5 rounded-full blur-[100px] sm:blur-[120px] pointer-events-none -z-10 animate-ambient-glow" />
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           
           {/* Left Column: Heading, Subhead, Direct WhatsApp CTA with Staggered Entrance */}
           <div className="lg:col-span-7 flex flex-col items-start">
@@ -31,7 +31,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: easeCurve, delay: 0.1 }}
-              className="font-serif text-4xl sm:text-5xl lg:text-[4rem] text-[#121E2C] leading-[1.08] tracking-tight mb-6 font-normal"
+              className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-[3.75rem] text-[#121E2C] leading-[1.12] sm:leading-[1.08] tracking-tight mb-5 sm:mb-6 font-normal"
             >
               Bicara dengan percaya diri. Buka kesempatan akademik dan karier global.
             </motion.h1>
@@ -41,17 +41,17 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: easeCurve, delay: 0.2 }}
-              className="text-base sm:text-lg text-[#4A525D] leading-relaxed max-w-xl mb-8 font-normal"
+              className="text-sm sm:text-base lg:text-lg text-[#4A525D] leading-relaxed max-w-xl mb-7 sm:mb-8 font-normal"
             >
               Pelatihan intensif persiapan ujian IELTS, komunikasi bisnis kantor, dan pendampingan privat bersama instruktur berkualifikasi Cambridge CELTA di BSD City dan kelas online.
             </motion.p>
 
-            {/* Actions Group */}
+            {/* Actions Group (min 44px tap target) */}
             <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: easeCurve, delay: 0.3 }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-12"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4 w-full sm:w-auto mb-10 sm:mb-12"
             >
               <motion.a
                 href={buildWhatsAppLink('Halo Lingua Pro Academy, saya ingin berkonsultasi mengenai program kursus dan mengambil Free Diagnostic Test.')}
@@ -59,10 +59,10 @@ export const Hero: React.FC = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 bg-[#121E2C] hover:bg-[#202E3F] text-[#FBFBFA] font-medium px-7 py-3.5 rounded-xs shadow-xs hover:shadow-md transition-colors text-sm group"
+                className="inline-flex items-center justify-center gap-2 bg-[#121E2C] hover:bg-[#202E3F] text-[#FBFBFA] font-medium px-6 sm:px-7 py-3.5 rounded-xs shadow-xs hover:shadow-md transition-colors text-sm group min-h-[48px] text-center"
               >
                 <span>Konsultasi & Tes Gratis via WhatsApp</span>
-                <ArrowRight className="w-4 h-4 text-[#9C7A3C] transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-4 h-4 text-[#9C7A3C] transition-transform group-hover:translate-x-1 shrink-0" />
               </motion.a>
 
               <motion.a
@@ -70,7 +70,7 @@ export const Hero: React.FC = () => {
                 onClick={handleScrollToPrograms}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center text-sm font-medium text-[#121E2C] hover:text-[#9C7A3C] px-5 py-3.5 border border-[#E3E1DA] hover:border-[#CAC6BA] rounded-xs bg-[#FFFFFF] hover:bg-[#F4F3EF]/60 transition-colors"
+                className="inline-flex items-center justify-center text-sm font-medium text-[#121E2C] hover:text-[#9C7A3C] px-5 py-3.5 border border-[#E3E1DA] hover:border-[#CAC6BA] rounded-xs bg-[#FFFFFF] hover:bg-[#F4F3EF]/60 transition-colors min-h-[48px] text-center"
               >
                 Lihat Katalog Program
               </motion.a>
@@ -81,7 +81,7 @@ export const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: easeCurve, delay: 0.4 }}
-              className="w-full pt-8 border-t border-[#E3E1DA]/80 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs"
+              className="w-full pt-6 sm:pt-8 border-t border-[#E3E1DA]/80 grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 text-xs"
             >
               <div className="group">
                 <div className="font-semibold text-[#121E2C] group-hover:text-[#9C7A3C] transition-colors">
@@ -118,23 +118,23 @@ export const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: easeCurve, delay: 0.25 }}
-            className="lg:col-span-5 relative"
+            className="lg:col-span-5 relative mt-4 lg:mt-0"
           >
             {/* Ambient Breathing Glow */}
-            <div className="absolute -inset-6 bg-gradient-to-tr from-[#9C7A3C]/20 via-[#121E2C]/10 to-[#9C7A3C]/15 rounded-3xl blur-3xl -z-10 animate-ambient-glow pointer-events-none" />
+            <div className="absolute -inset-4 sm:-inset-6 bg-gradient-to-tr from-[#9C7A3C]/20 via-[#121E2C]/10 to-[#9C7A3C]/15 rounded-3xl blur-2xl sm:blur-3xl -z-10 animate-ambient-glow pointer-events-none" />
 
             <div className="border border-[#E3E1DA] p-2 bg-[#FFFFFF] rounded-xs shadow-md hover:shadow-xl transition-shadow duration-300 group">
               <div className="relative overflow-hidden bg-[#F4F3EF] rounded-xs">
                 <img
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=900&q=80"
                   alt="Sesi diskusi dan presentasi profesional di Lingua Pro Academy"
-                  className="w-full h-[400px] md:h-[480px] object-cover transition-transform duration-700 group-hover:scale-102"
+                  className="w-full h-[280px] sm:h-[400px] md:h-[480px] object-cover transition-transform duration-700 group-hover:scale-102"
                   loading="eager"
                 />
               </div>
 
-              <div className="p-3 pt-3.5 flex items-center justify-between text-[11px] text-[#4A525D] border-t border-[#E3E1DA]/80 mt-2">
-                <span>Lingua Pro Academy • Ruko Emerald Avenue, BSD City</span>
+              <div className="p-3 pt-3.5 flex flex-col sm:flex-row sm:items-center justify-between text-[11px] text-[#4A525D] border-t border-[#E3E1DA]/80 mt-2 gap-1 sm:gap-0">
+                <span>Lingua Pro Academy • BSD City Campus</span>
                 <span className="font-mono text-[#121E2C] font-semibold">Est. 2021</span>
               </div>
             </div>

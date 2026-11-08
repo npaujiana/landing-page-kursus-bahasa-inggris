@@ -111,7 +111,7 @@ export const FAQ: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Cari kata kunci (IELTS, biaya, jadwal)..."
-              className="w-full bg-[#FFFFFF] border border-[#E3E1DA] rounded-xs pl-10 pr-4 py-2 text-xs sm:text-sm text-[#121E2C] placeholder-[#737C87] focus:outline-hidden focus:border-[#121E2C] transition-colors"
+              className="w-full bg-[#FFFFFF] border border-[#E3E1DA] rounded-xs pl-10 pr-4 py-2.5 min-h-[44px] text-xs sm:text-sm text-[#121E2C] placeholder-[#737C87] focus:outline-hidden focus:border-[#121E2C] transition-colors"
             />
           </div>
 
@@ -127,7 +127,7 @@ export const FAQ: React.FC = () => {
               <button
                 key={cat.id}
                 onClick={() => setFilterCategory(cat.id as any)}
-                className={`px-3 py-1.5 rounded-xs transition-colors ${
+                className={`px-3 py-2 min-h-[40px] rounded-xs transition-colors ${
                   filterCategory === cat.id
                     ? 'bg-[#121E2C] text-[#FBFBFA]'
                     : 'bg-[#FFFFFF] text-[#4A525D] border border-[#E3E1DA] hover:text-[#121E2C]'
@@ -148,10 +148,10 @@ export const FAQ: React.FC = () => {
                 <div key={index} className="border-b border-[#E3E1DA]">
                   <button
                     onClick={() => toggleAccordion(index)}
-                    className="w-full text-left py-5 flex items-center justify-between gap-4 hover:text-[#9C7A3C] transition-colors"
+                    className="w-full text-left py-4 sm:py-5 flex items-center justify-between gap-4 hover:text-[#9C7A3C] transition-colors min-h-[48px]"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-serif text-lg text-[#121E2C] leading-snug">
+                    <span className="font-serif text-base sm:text-lg text-[#121E2C] leading-snug">
                       {faq.q}
                     </span>
                     <ChevronDown

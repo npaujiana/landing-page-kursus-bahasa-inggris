@@ -9,8 +9,8 @@ export const Programs: React.FC = () => {
   const speaking = siteConfig.programs.find((p) => p.id === 'speaking-coaching')!
 
   return (
-    <section id="programs" className="py-20 md:py-28 bg-[#FBFBFA] border-b border-[#E3E1DA]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+    <section id="programs" className="py-16 sm:py-20 md:py-28 bg-[#FBFBFA] border-b border-[#E3E1DA]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header */}
         <motion.div
@@ -18,7 +18,7 @@ export const Programs: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl mb-14"
+          className="max-w-2xl mb-12 sm:mb-14"
         >
           <div className="text-xs font-semibold text-[#9C7A3C] uppercase tracking-wider mb-2">
             Pilihan Program Pembelajaran
@@ -38,7 +38,7 @@ export const Programs: React.FC = () => {
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6 }}
           whileHover={{ y: -4 }}
-          className="border border-[#121E2C] bg-[#FFFFFF] rounded-xs p-6 sm:p-8 md:p-10 mb-8 shadow-xs hover:shadow-xl transition-shadow duration-300"
+          className="border border-[#121E2C] bg-[#FFFFFF] rounded-xs p-5 sm:p-8 md:p-10 mb-8 shadow-xs hover:shadow-xl transition-shadow duration-300"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
@@ -83,10 +83,10 @@ export const Programs: React.FC = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="bg-[#121E2C] hover:bg-[#202E3F] text-[#FBFBFA] text-xs font-semibold px-5 py-3 rounded-xs transition-colors text-center inline-flex items-center justify-center gap-2 group hover:shadow-md"
+                  className="bg-[#121E2C] hover:bg-[#202E3F] text-[#FBFBFA] text-xs font-semibold px-5 py-3.5 rounded-xs transition-colors text-center inline-flex items-center justify-center gap-2 group hover:shadow-md min-h-[44px]"
                 >
                   <span>Daftar IELTS via WhatsApp</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#9C7A3C] transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#9C7A3C] transition-transform group-hover:translate-x-1 shrink-0" />
                 </motion.a>
 
                 <motion.a
@@ -95,7 +95,7 @@ export const Programs: React.FC = () => {
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="text-xs font-medium text-[#121E2C] hover:text-[#9C7A3C] px-3 py-3 border border-[#E3E1DA] hover:border-[#CAC6BA] rounded-xs text-center transition-colors"
+                  className="text-xs font-medium text-[#121E2C] hover:text-[#9C7A3C] px-4 py-3.5 border border-[#E3E1DA] hover:border-[#CAC6BA] rounded-xs text-center transition-colors min-h-[44px] inline-flex items-center justify-center"
                 >
                   Tanya Jadwal & Kurikulum
                 </motion.a>
@@ -104,7 +104,7 @@ export const Programs: React.FC = () => {
 
             {/* Right Column: Curriculum & Benefits */}
             <div className="lg:col-span-7 lg:border-l lg:border-[#E3E1DA] lg:pl-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div>
                   <div className="text-xs font-bold text-[#121E2C] uppercase tracking-wider mb-3">
                     Modul yang Dipelajari:
@@ -154,7 +154,7 @@ export const Programs: React.FC = () => {
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.6, delay: 0.1 }}
             whileHover={{ y: -4 }}
-            className="border border-[#E3E1DA] bg-[#FFFFFF] rounded-xs p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-lg transition-shadow duration-300"
+            className="border border-[#E3E1DA] bg-[#FFFFFF] rounded-xs p-5 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-lg transition-shadow duration-300"
           >
             <div>
               <div className="text-[11px] font-semibold text-[#9C7A3C] uppercase tracking-wider mb-2">
@@ -196,7 +196,7 @@ export const Programs: React.FC = () => {
               </ul>
             </div>
 
-            <div className="pt-4 border-t border-[#E3E1DA] flex items-center justify-between gap-3">
+            <div className="pt-4 border-t border-[#E3E1DA] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
               <span className="text-xs text-[#737C87]">Kelas Tatap Muka & Online</span>
               <motion.a
                 href={buildWhatsAppLink('Halo Lingua Pro Academy, saya tertarik mendaftar program Workplace Business English.')}
@@ -204,10 +204,10 @@ export const Programs: React.FC = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-[#121E2C] hover:bg-[#202E3F] text-[#FBFBFA] text-xs font-semibold px-4 py-2.5 rounded-xs transition-colors inline-flex items-center gap-1.5 group"
+                className="bg-[#121E2C] hover:bg-[#202E3F] text-[#FBFBFA] text-xs font-semibold px-4 py-3 rounded-xs transition-colors inline-flex items-center justify-center gap-1.5 group min-h-[44px]"
               >
                 <span>Daftar via WhatsApp</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#9C7A3C] transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#9C7A3C] transition-transform group-hover:translate-x-1 shrink-0" />
               </motion.a>
             </div>
           </motion.div>
@@ -219,7 +219,7 @@ export const Programs: React.FC = () => {
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.6, delay: 0.2 }}
             whileHover={{ y: -4 }}
-            className="border border-[#E3E1DA] bg-[#FFFFFF] rounded-xs p-6 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-lg transition-shadow duration-300"
+            className="border border-[#E3E1DA] bg-[#FFFFFF] rounded-xs p-5 sm:p-8 flex flex-col justify-between shadow-xs hover:shadow-lg transition-shadow duration-300"
           >
             <div>
               <div className="text-[11px] font-semibold text-[#9C7A3C] uppercase tracking-wider mb-2">
@@ -261,7 +261,7 @@ export const Programs: React.FC = () => {
               </ul>
             </div>
 
-            <div className="pt-4 border-t border-[#E3E1DA] flex items-center justify-between gap-3">
+            <div className="pt-4 border-t border-[#E3E1DA] flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
               <span className="text-xs text-[#737C87]">Jadwal Fleksibel (1 Tutor 1 Siswa)</span>
               <motion.a
                 href={buildWhatsAppLink('Halo Lingua Pro Academy, saya ingin memesan sesi 1-on-1 Speaking Private Coaching.')}
@@ -269,10 +269,10 @@ export const Programs: React.FC = () => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-[#121E2C] hover:bg-[#202E3F] text-[#FBFBFA] text-xs font-semibold px-4 py-2.5 rounded-xs transition-colors inline-flex items-center gap-1.5 group"
+                className="bg-[#121E2C] hover:bg-[#202E3F] text-[#FBFBFA] text-xs font-semibold px-4 py-3 rounded-xs transition-colors inline-flex items-center justify-center gap-1.5 group min-h-[44px]"
               >
                 <span>Pesan Sesi via WhatsApp</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#9C7A3C] transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#9C7A3C] transition-transform group-hover:translate-x-1 shrink-0" />
               </motion.a>
             </div>
           </motion.div>

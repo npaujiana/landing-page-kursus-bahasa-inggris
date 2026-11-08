@@ -67,31 +67,42 @@ export const Header: React.FC = () => {
     }
   }
 
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = ''
+    }
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [mobileMenuOpen])
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'py-4 bg-[#FBFBFA]/85 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.02)]'
-          : 'py-6 bg-transparent'
+          ? 'py-3 sm:py-4 bg-[#FBFBFA]/90 backdrop-blur-md shadow-[0_2px_12px_rgba(0,0,0,0.03)] border-b border-[#E3E1DA]/50'
+          : 'py-4 sm:py-6 bg-transparent'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 flex items-center justify-between">
         
         {/* Brand Logo (GrooWeb Style) */}
         <a
           href="#hero"
           onClick={(e) => handleNavClick(e, '#hero', 'hero')}
-          className="flex items-center gap-2.5 group focus-visible:outline-hidden"
+          className="flex items-center gap-2.5 group focus-visible:outline-hidden py-1 min-h-[44px]"
           aria-label="Lingua Pro Academy Home"
         >
-          <div className="w-8 h-8 rounded-full bg-[#121E2C] text-white font-serif font-bold text-sm flex items-center justify-center transition-transform group-hover:scale-105">
+          <div className="w-8 h-8 rounded-full bg-[#121E2C] text-white font-serif font-bold text-sm flex items-center justify-center transition-transform group-hover:scale-105 shrink-0">
             L
           </div>
           <div className="flex flex-col">
-            <span className="font-serif text-lg font-bold tracking-tight text-[#121E2C] leading-none">
+            <span className="font-serif text-base sm:text-lg font-bold tracking-tight text-[#121E2C] leading-none">
               Lingua Pro
             </span>
-            <span className="text-[10px] uppercase tracking-wider text-[#737C87] mt-0.5 font-medium">
+            <span className="text-[9px] sm:text-[10px] uppercase tracking-wider text-[#737C87] mt-0.5 font-medium">
               English Academy
             </span>
           </div>
@@ -106,7 +117,7 @@ export const Header: React.FC = () => {
                 key={link.id}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href, link.id)}
-                className={`text-xs transition-colors py-1 relative ${
+                className={`text-xs transition-colors py-2 relative min-h-[44px] flex items-center ${
                   isActive
                     ? 'text-[#121E2C] font-bold'
                     : 'text-[#4A525D] hover:text-[#121E2C] font-medium'
@@ -114,32 +125,33 @@ export const Header: React.FC = () => {
               >
                 <span>{link.label}</span>
                 {isActive && (
-                  <span className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[#121E2C] rounded-full" />
+                  <span className="absolute bottom-1 left-0 right-0 h-[2px] bg-[#121E2C] rounded-full" />
                 )}
               </a>
             )
           })}
         </nav>
 
-        {/* Mobile Hamburger Toggle */}
+        {/* Mobile Hamburger Toggle (44px min tap target) */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 text-[#121E2C] hover:bg-neutral-200/50 rounded-xs transition-colors"
+          className="md:hidden min-w-[44px] min-h-[44px] flex items-center justify-center p-2 text-[#121E2C] hover:bg-neutral-200/50 rounded-lg transition-colors focus-visible:outline-hidden"
           aria-label={mobileMenuOpen ? 'Tutup navigasi' : 'Buka navigasi'}
+          aria-expanded={mobileMenuOpen}
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
 
       </div>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Drawer with Backdrop Blur */}
       {mobileMenuOpen && (
         <div
-          className="md:hidden fixed inset-0 top-16 z-30 bg-black/30 backdrop-blur-xs animate-fade-in"
+          className="md:hidden fixed inset-0 top-[60px] sm:top-[68px] z-30 bg-black/40 backdrop-blur-sm animate-fade-in"
           onClick={() => setMobileMenuOpen(false)}
         >
           <div
-            className="w-full bg-[#FBFBFA] border-b border-[#E3E1DA] p-6 shadow-xl flex flex-col gap-3"
+            className="w-full bg-[#FBFBFA] border-b border-[#E3E1DA] px-4 py-5 sm:p-6 shadow-xl flex flex-col gap-2 max-w-full"
             onClick={(e) => e.stopPropagation()}
           >
             {navLinks.map((link) => {
@@ -149,14 +161,14 @@ export const Header: React.FC = () => {
                   key={link.id}
                   href={link.href}
                   onClick={(e) => handleNavClick(e, link.href, link.id)}
-                  className={`text-sm py-2 px-3 rounded-xs transition-colors flex items-center justify-between border-l-2 ${
+                  className={`text-sm py-3 px-4 rounded-lg transition-colors flex items-center justify-between border-l-2 min-h-[44px] ${
                     isActive
                       ? 'font-bold text-[#121E2C] bg-[#F4F3EF] border-[#121E2C]'
-                      : 'font-medium text-[#4A525D] hover:text-[#121E2C] border-transparent'
+                      : 'font-medium text-[#4A525D] hover:text-[#121E2C] hover:bg-neutral-100/60 border-transparent'
                   }`}
                 >
-                  <span>{link.label}</span>
-                  {isActive && <span className="text-[10px] text-[#9C7A3C] font-mono">Aktif</span>}
+                  <span className="text-base">{link.label}</span>
+                  {isActive && <span className="text-xs text-[#9C7A3C] font-mono">Aktif</span>}
                 </a>
               )
             })}

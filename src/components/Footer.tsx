@@ -43,13 +43,13 @@ export const Footer: React.FC = () => {
             <div className="text-xs font-bold uppercase tracking-wider text-[#121E2C] mb-3">
               Navigasi
             </div>
-            <ul className="space-y-2 text-xs text-[#4A525D]">
-              <li><a href="#hero" className="hover:text-[#121E2C]">Home</a></li>
-              <li><a href="#programs" className="hover:text-[#121E2C]">Program Kursus</a></li>
-              <li><a href="#approach" className="hover:text-[#121E2C]">Metode Belajar</a></li>
-              <li><a href="#why-us" className="hover:text-[#121E2C]">Keunggulan</a></li>
-              <li><a href="#hybrid" className="hover:text-[#121E2C]">Sistem Hybrid</a></li>
-              <li><a href="#faq" className="hover:text-[#121E2C]">Tanya Jawab</a></li>
+            <ul className="space-y-1 text-xs text-[#4A525D]">
+              <li><a href="#hero" className="hover:text-[#121E2C] py-1.5 inline-block min-h-[36px] sm:min-h-0">Home</a></li>
+              <li><a href="#programs" className="hover:text-[#121E2C] py-1.5 inline-block min-h-[36px] sm:min-h-0">Program Kursus</a></li>
+              <li><a href="#approach" className="hover:text-[#121E2C] py-1.5 inline-block min-h-[36px] sm:min-h-0">Metode Belajar</a></li>
+              <li><a href="#why-us" className="hover:text-[#121E2C] py-1.5 inline-block min-h-[36px] sm:min-h-0">Keunggulan</a></li>
+              <li><a href="#hybrid" className="hover:text-[#121E2C] py-1.5 inline-block min-h-[36px] sm:min-h-0">Sistem Hybrid</a></li>
+              <li><a href="#faq" className="hover:text-[#121E2C] py-1.5 inline-block min-h-[36px] sm:min-h-0">Tanya Jawab</a></li>
             </ul>
           </div>
 
@@ -58,11 +58,11 @@ export const Footer: React.FC = () => {
             <div className="text-xs font-bold uppercase tracking-wider text-[#121E2C] mb-3">
               Program Kursus
             </div>
-            <ul className="space-y-2 text-xs text-[#4A525D]">
-              <li><a href="#programs" className="hover:text-[#121E2C]">IELTS Intensive Prep</a></li>
-              <li><a href="#programs" className="hover:text-[#121E2C]">Workplace Business English</a></li>
-              <li><a href="#programs" className="hover:text-[#121E2C]">1-on-1 Speaking Coaching</a></li>
-              <li><a href="#diagnostic-test" className="text-[#9C7A3C] hover:underline font-medium">Free Diagnostic Test</a></li>
+            <ul className="space-y-1 text-xs text-[#4A525D]">
+              <li><a href="#programs" className="hover:text-[#121E2C] py-1.5 inline-block min-h-[36px] sm:min-h-0">IELTS Intensive Prep</a></li>
+              <li><a href="#programs" className="hover:text-[#121E2C] py-1.5 inline-block min-h-[36px] sm:min-h-0">Workplace Business English</a></li>
+              <li><a href="#programs" className="hover:text-[#121E2C] py-1.5 inline-block min-h-[36px] sm:min-h-0">1-on-1 Speaking Coaching</a></li>
+              <li><a href="#diagnostic-test" className="text-[#9C7A3C] hover:underline font-medium py-1.5 inline-block min-h-[36px] sm:min-h-0">Free Diagnostic Test</a></li>
             </ul>
           </div>
 
@@ -103,7 +103,7 @@ export const Footer: React.FC = () => {
 
           <button
             onClick={scrollToTop}
-            className="inline-flex items-center gap-1.5 text-[#121E2C] hover:text-[#9C7A3C] transition-colors"
+            className="inline-flex items-center gap-1.5 text-[#121E2C] hover:text-[#9C7A3C] transition-colors py-2.5 px-3 min-h-[44px] rounded-xs"
           >
             <span>Kembali ke Atas</span>
             <ArrowUp className="w-3.5 h-3.5" />

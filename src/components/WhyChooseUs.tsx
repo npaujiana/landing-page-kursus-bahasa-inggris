@@ -30,8 +30,8 @@ export const WhyChooseUs: React.FC = () => {
   ]
 
   return (
-    <section id="why-us" className="py-20 md:py-28 bg-[#FBFBFA] border-b border-[#E3E1DA]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+    <section id="why-us" className="py-16 sm:py-20 md:py-28 bg-[#FBFBFA] border-b border-[#E3E1DA]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header */}
         <motion.div
@@ -39,7 +39,7 @@ export const WhyChooseUs: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl mb-14"
+          className="max-w-2xl mb-12 sm:mb-14"
         >
           <div className="text-xs font-semibold text-[#9C7A3C] uppercase tracking-wider mb-2">
             Keunggulan Akademi
@@ -53,7 +53,7 @@ export const WhyChooseUs: React.FC = () => {
         </motion.div>
 
         {/* 6 Differentiators in Structured Editorial Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 sm:mb-14">
           {differentiators.map((diff, index) => (
             <motion.div
               key={index}
@@ -85,10 +85,10 @@ export const WhyChooseUs: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6 }}
-          className="border border-[#121E2C] bg-[#121E2C] text-[#FBFBFA] p-8 sm:p-10 rounded-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-md"
+          className="border border-[#121E2C] bg-[#121E2C] text-[#FBFBFA] p-6 sm:p-10 rounded-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-md"
         >
           <div className="max-w-2xl">
-            <p className="font-serif text-xl sm:text-2xl text-[#FBFBFA] font-normal leading-relaxed mb-3">
+            <p className="font-serif text-lg sm:text-xl md:text-2xl text-[#FBFBFA] font-normal leading-relaxed mb-3">
               &ldquo;Kemampuan Bahasa Inggris bukan sekadar penguasaan tata bahasa di atas kertas, melainkan jembatan yang menghubungkan Anda dengan peluang global selanjutnya.&rdquo;
             </p>
             <div className="text-xs text-[#CAC6BA]">
@@ -96,7 +96,7 @@ export const WhyChooseUs: React.FC = () => {
             </div>
           </div>
 
-          <div className="text-right shrink-0">
+          <div className="text-left md:text-right shrink-0">
             <span className="text-xs font-mono text-[#9C7A3C] uppercase tracking-wider block">
               BSD City Campus
             </span>

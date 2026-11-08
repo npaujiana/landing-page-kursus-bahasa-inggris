@@ -23,12 +23,23 @@
 
 @layer base {
   html, body {
+    overflow-x: hidden;
     overflow-x: clip;
+    width: 100%;
+    max-width: 100%;
     background-color: var(--color-paper);
     color: var(--color-text-main);
     font-family: var(--font-sans);
     line-height: 1.6;
     letter-spacing: normal;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  #root {
+    overflow-x: hidden;
+    overflow-x: clip;
+    width: 100%;
+    max-width: 100%;
   }
 
   h1, h2, h3, h4, .font-editorial {

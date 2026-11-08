@@ -26,8 +26,8 @@ export const LearningApproach: React.FC = () => {
   ]
 
   return (
-    <section id="approach" className="py-20 md:py-28 bg-[#FFFFFF] border-b border-[#E3E1DA]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+    <section id="approach" className="py-16 sm:py-20 md:py-28 bg-[#FFFFFF] border-b border-[#E3E1DA]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header */}
         <motion.div
@@ -35,7 +35,7 @@ export const LearningApproach: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl mb-14"
+          className="max-w-2xl mb-12 sm:mb-14"
         >
           <div className="text-xs font-semibold text-[#9C7A3C] uppercase tracking-wider mb-2">
             Filosofi Pembelajaran
@@ -49,10 +49,10 @@ export const LearningApproach: React.FC = () => {
         </motion.div>
 
         {/* Asymmetrical Layout: Numbered Index Column + Editorial Photography */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           
           {/* Left Column: Numbered List */}
-          <div className="lg:col-span-7 space-y-6">
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6">
             {principles.map((item, index) => (
               <motion.div
                 key={item.num}
@@ -60,13 +60,13 @@ export const LearningApproach: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="border-b border-[#E3E1DA] pb-6 flex items-start gap-6 group"
+                className="border-b border-[#E3E1DA] pb-5 sm:pb-6 flex items-start gap-4 sm:gap-6 group"
               >
-                <span className="font-serif text-2xl font-bold text-[#9C7A3C] tabular-nums shrink-0 pt-0.5 group-hover:scale-105 transition-transform">
+                <span className="font-serif text-xl sm:text-2xl font-bold text-[#9C7A3C] tabular-nums shrink-0 pt-0.5 group-hover:scale-105 transition-transform">
                   {item.num}
                 </span>
                 <div>
-                  <h3 className="font-serif text-xl font-bold text-[#121E2C] mb-1.5">
+                  <h3 className="font-serif text-lg sm:text-xl font-bold text-[#121E2C] mb-1.5">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-[#4A525D] leading-relaxed">
@@ -83,13 +83,13 @@ export const LearningApproach: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-5"
+            className="lg:col-span-5 mt-4 lg:mt-0"
           >
             <div className="border border-[#E3E1DA] p-2 bg-[#FBFBFA] rounded-xs shadow-xs hover:shadow-md transition-shadow">
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
                 alt="Suasana kolaboratif dan suportif di kelas Lingua Pro Academy"
-                className="w-full h-[360px] md:h-[420px] object-cover"
+                className="w-full h-[260px] sm:h-[360px] md:h-[420px] object-cover"
                 loading="lazy"
               />
               <div className="p-3 text-[11px] text-[#4A525D] border-t border-[#E3E1DA] mt-2">

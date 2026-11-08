@@ -4,8 +4,8 @@ import { siteConfig, buildWhatsAppLink } from '../config/siteConfig'
 
 export const HybridExperience: React.FC = () => {
   return (
-    <section id="hybrid" className="py-20 md:py-28 bg-[#FFFFFF] border-b border-[#E3E1DA]">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8">
+    <section id="hybrid" className="py-16 sm:py-20 md:py-28 bg-[#FFFFFF] border-b border-[#E3E1DA]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8">
         
         {/* Section Header */}
         <motion.div
@@ -13,7 +13,7 @@ export const HybridExperience: React.FC = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-40px' }}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl mb-14"
+          className="max-w-2xl mb-12 sm:mb-14"
         >
           <div className="text-xs font-semibold text-[#9C7A3C] uppercase tracking-wider mb-2">
             Lingkungan Pembelajaran Hybrid
@@ -119,7 +119,7 @@ export const HybridExperience: React.FC = () => {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="shrink-0 bg-[#121E2C] hover:bg-[#202E3F] text-[#FBFBFA] text-xs font-semibold px-5 py-2.5 rounded-xs transition-colors"
+            className="shrink-0 w-full sm:w-auto text-center inline-flex items-center justify-center bg-[#121E2C] hover:bg-[#202E3F] text-[#FBFBFA] text-xs font-semibold px-5 py-3 rounded-xs transition-colors min-h-[44px]"
           >
             Jadwalkan Kunjungan Kampus
           </motion.a>
