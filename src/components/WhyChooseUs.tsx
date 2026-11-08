@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export const WhyChooseUs: React.FC = () => {
   const differentiators = [
@@ -30,10 +31,16 @@ export const WhyChooseUs: React.FC = () => {
 
   return (
     <section id="why-us" className="py-20 md:py-28 bg-[#FBFBFA] border-b border-[#E3E1DA]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Section Header */}
-        <div className="max-w-2xl mb-14">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl mb-14"
+        >
           <div className="text-xs font-semibold text-[#9C7A3C] uppercase tracking-wider mb-2">
             Keunggulan Akademi
           </div>
@@ -43,14 +50,19 @@ export const WhyChooseUs: React.FC = () => {
           <p className="text-sm sm:text-base text-[#4A525D] leading-relaxed">
             Fokus kami adalah membantu setiap peserta mencapai target akademik dan profesional mereka secara terukur dan realistis.
           </p>
-        </div>
+        </motion.div>
 
         {/* 6 Differentiators in Structured Editorial Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-14">
           {differentiators.map((diff, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-[#FFFFFF] border border-[#E3E1DA] rounded-xs p-6 flex flex-col justify-between"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              whileHover={{ y: -3 }}
+              className="bg-[#FFFFFF] border border-[#E3E1DA] rounded-xs p-6 flex flex-col justify-between shadow-2xs hover:shadow-md transition-shadow"
             >
               <div>
                 <span className="text-xs font-mono text-[#9C7A3C] block mb-2 tabular-nums">
@@ -63,12 +75,18 @@ export const WhyChooseUs: React.FC = () => {
                   {diff.desc}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
         {/* Academic Director Quote Block */}
-        <div className="border border-[#121E2C] bg-[#121E2C] text-[#FBFBFA] p-8 sm:p-10 rounded-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.6 }}
+          className="border border-[#121E2C] bg-[#121E2C] text-[#FBFBFA] p-8 sm:p-10 rounded-xs flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-md"
+        >
           <div className="max-w-2xl">
             <p className="font-serif text-xl sm:text-2xl text-[#FBFBFA] font-normal leading-relaxed mb-3">
               &ldquo;Kemampuan Bahasa Inggris bukan sekadar penguasaan tata bahasa di atas kertas, melainkan jembatan yang menghubungkan Anda dengan peluang global selanjutnya.&rdquo;
@@ -86,7 +104,7 @@ export const WhyChooseUs: React.FC = () => {
               Tangerang Selatan, Banten
             </span>
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>

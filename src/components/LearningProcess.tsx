@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export const LearningProcess: React.FC = () => {
   const steps = [
@@ -31,10 +32,16 @@ export const LearningProcess: React.FC = () => {
 
   return (
     <section className="py-20 md:py-28 bg-[#FBFBFA] border-b border-[#E3E1DA]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Section Header */}
-        <div className="max-w-2xl mb-14">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl mb-14"
+        >
           <div className="text-xs font-semibold text-[#9C7A3C] uppercase tracking-wider mb-2">
             Alur Pendaftaran
           </div>
@@ -44,13 +51,17 @@ export const LearningProcess: React.FC = () => {
           <p className="text-sm sm:text-base text-[#4A525D] leading-relaxed">
             Setiap proses dirancang sederhana agar peserta mendapatkan bimbingan yang tepat sejak hari pertama.
           </p>
-        </div>
+        </motion.div>
 
         {/* Steps Grid: Clean Editorial Index Layout */}
         <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
           {steps.map((item, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="border-t border-[#121E2C] pt-4 flex flex-col justify-between"
             >
               <div>
@@ -64,7 +75,7 @@ export const LearningProcess: React.FC = () => {
                   {item.desc}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

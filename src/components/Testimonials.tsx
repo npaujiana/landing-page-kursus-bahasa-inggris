@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export const Testimonials: React.FC = () => {
   const testimonials = [
@@ -27,10 +28,16 @@ export const Testimonials: React.FC = () => {
 
   return (
     <section id="testimonials" className="py-20 md:py-28 bg-[#FFFFFF] border-b border-[#E3E1DA]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Section Header */}
-        <div className="max-w-2xl mb-12">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl mb-12"
+        >
           <div className="text-xs font-semibold text-[#9C7A3C] uppercase tracking-wider mb-2">
             Pengalaman Belajar
           </div>
@@ -40,13 +47,17 @@ export const Testimonials: React.FC = () => {
           <p className="text-xs sm:text-sm text-[#737C87] leading-relaxed">
             Catatan: Contoh kutipan di bawah merupakan data demonstrasi showcase (Sample Testimonials — Demonstration Content).
           </p>
-        </div>
+        </motion.div>
 
         {/* Testimonials in Hairline Split Columns */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((item, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-40px' }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="border-l border-[#E3E1DA] pl-6 flex flex-col justify-between"
             >
               <div>
@@ -60,7 +71,7 @@ export const Testimonials: React.FC = () => {
                 <div className="text-xs text-[#4A525D]">{item.role}</div>
                 <div className="text-[11px] text-[#9C7A3C] font-mono mt-1">{item.tag}</div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 

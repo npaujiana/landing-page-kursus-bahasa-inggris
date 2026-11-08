@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 export const LearningApproach: React.FC = () => {
   const principles = [
@@ -26,10 +27,16 @@ export const LearningApproach: React.FC = () => {
 
   return (
     <section id="approach" className="py-20 md:py-28 bg-[#FFFFFF] border-b border-[#E3E1DA]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
         
         {/* Section Header */}
-        <div className="max-w-2xl mb-14">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-40px' }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl mb-14"
+        >
           <div className="text-xs font-semibold text-[#9C7A3C] uppercase tracking-wider mb-2">
             Filosofi Pembelajaran
           </div>
@@ -39,19 +46,23 @@ export const LearningApproach: React.FC = () => {
           <p className="text-sm sm:text-base text-[#4A525D] leading-relaxed">
             Kemampuan berbahasa Inggris berkembang melalui latihan percakapan aktif yang konsisten, umpan balik yang konstruktif, dan materi yang relevan dengan situasi sehari-hari.
           </p>
-        </div>
+        </motion.div>
 
         {/* Asymmetrical Layout: Numbered Index Column + Editorial Photography */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           
           {/* Left Column: Numbered List */}
           <div className="lg:col-span-7 space-y-6">
-            {principles.map((item) => (
-              <div
+            {principles.map((item, index) => (
+              <motion.div
                 key={item.num}
-                className="border-b border-[#E3E1DA] pb-6 flex items-start gap-6"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="border-b border-[#E3E1DA] pb-6 flex items-start gap-6 group"
               >
-                <span className="font-serif text-2xl font-bold text-[#9C7A3C] tabular-nums shrink-0 pt-0.5">
+                <span className="font-serif text-2xl font-bold text-[#9C7A3C] tabular-nums shrink-0 pt-0.5 group-hover:scale-105 transition-transform">
                   {item.num}
                 </span>
                 <div>
@@ -62,13 +73,19 @@ export const LearningApproach: React.FC = () => {
                     {item.desc}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
 
           {/* Right Column: Framed Editorial Photography */}
-          <div className="lg:col-span-5">
-            <div className="border border-[#E3E1DA] p-2 bg-[#FBFBFA] rounded-xs">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-40px' }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="lg:col-span-5"
+          >
+            <div className="border border-[#E3E1DA] p-2 bg-[#FBFBFA] rounded-xs shadow-xs hover:shadow-md transition-shadow">
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80"
                 alt="Suasana kolaboratif dan suportif di kelas Lingua Pro Academy"
@@ -79,7 +96,7 @@ export const LearningApproach: React.FC = () => {
                 Suasana belajar interaktif yang mengutamakan partisipasi aktif seluruh peserta.
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
 

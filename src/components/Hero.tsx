@@ -1,6 +1,9 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { buildWhatsAppLink } from '../config/siteConfig'
+
+const easeCurve = [0.16, 1, 0.3, 1] as const
 
 export const Hero: React.FC = () => {
   const handleScrollToPrograms = (e: React.MouseEvent) => {
@@ -20,42 +23,66 @@ export const Hero: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
           
-          {/* Left Column: Heading, Subhead, Direct WhatsApp CTA (Staggered Animation) */}
+          {/* Left Column: Heading, Subhead, Direct WhatsApp CTA with Staggered Entrance */}
           <div className="lg:col-span-7 flex flex-col items-start">
             
             {/* The Direct Editorial Heading */}
-            <h1 className="font-serif text-4xl sm:text-5xl lg:text-[4rem] text-[#121E2C] leading-[1.08] tracking-tight mb-6 font-normal animate-fade-in-up animation-delay-100">
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: easeCurve, delay: 0.1 }}
+              className="font-serif text-4xl sm:text-5xl lg:text-[4rem] text-[#121E2C] leading-[1.08] tracking-tight mb-6 font-normal"
+            >
               Bicara dengan percaya diri. Buka kesempatan akademik dan karier global.
-            </h1>
+            </motion.h1>
 
             {/* Subtitle */}
-            <p className="text-base sm:text-lg text-[#4A525D] leading-relaxed max-w-xl mb-8 font-normal animate-fade-in-up animation-delay-200">
+            <motion.p
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: easeCurve, delay: 0.2 }}
+              className="text-base sm:text-lg text-[#4A525D] leading-relaxed max-w-xl mb-8 font-normal"
+            >
               Pelatihan intensif persiapan ujian IELTS, komunikasi bisnis kantor, dan pendampingan privat bersama instruktur berkualifikasi Cambridge CELTA di BSD City dan kelas online.
-            </p>
+            </motion.p>
 
             {/* Actions Group */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-12 animate-fade-in-up animation-delay-300">
-              <a
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: easeCurve, delay: 0.3 }}
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto mb-12"
+            >
+              <motion.a
                 href={buildWhatsAppLink('Halo Lingua Pro Academy, saya ingin berkonsultasi mengenai program kursus dan mengambil Free Diagnostic Test.')}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-[#121E2C] hover:bg-[#202E3F] text-[#FBFBFA] font-medium px-7 py-3.5 rounded-xs shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 text-sm group"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-flex items-center justify-center gap-2 bg-[#121E2C] hover:bg-[#202E3F] text-[#FBFBFA] font-medium px-7 py-3.5 rounded-xs shadow-xs hover:shadow-md transition-colors text-sm group"
               >
                 <span>Konsultasi & Tes Gratis via WhatsApp</span>
                 <ArrowRight className="w-4 h-4 text-[#9C7A3C] transition-transform group-hover:translate-x-1" />
-              </a>
+              </motion.a>
 
-              <a
+              <motion.a
                 href="#programs"
                 onClick={handleScrollToPrograms}
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 className="inline-flex items-center justify-center text-sm font-medium text-[#121E2C] hover:text-[#9C7A3C] px-5 py-3.5 border border-[#E3E1DA] hover:border-[#CAC6BA] rounded-xs bg-[#FFFFFF] hover:bg-[#F4F3EF]/60 transition-colors"
               >
                 Lihat Katalog Program
-              </a>
-            </div>
+              </motion.a>
+            </motion.div>
 
             {/* Supporting Facts Strip */}
-            <div className="w-full pt-8 border-t border-[#E3E1DA]/80 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs animate-fade-in-up animation-delay-400">
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: easeCurve, delay: 0.4 }}
+              className="w-full pt-8 border-t border-[#E3E1DA]/80 grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs"
+            >
               <div className="group">
                 <div className="font-semibold text-[#121E2C] group-hover:text-[#9C7A3C] transition-colors">
                   Asesmen Awal Gratis
@@ -82,14 +109,18 @@ export const Hero: React.FC = () => {
                   Kampus BSD City & kelas daring interaktif
                 </div>
               </div>
-            </div>
+            </motion.div>
 
           </div>
 
-          {/* Right Column: Visual Mockup with Ambient Glow Pulse */}
-          <div className="lg:col-span-5 relative animate-fade-in-up animation-delay-200">
-            
-            {/* Ambient Breathing Glow (GrooWeb Style) */}
+          {/* Right Column: Visual Mockup with Ambient Glow Pulse & Smooth Entrance */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: easeCurve, delay: 0.25 }}
+            className="lg:col-span-5 relative"
+          >
+            {/* Ambient Breathing Glow */}
             <div className="absolute -inset-6 bg-gradient-to-tr from-[#9C7A3C]/20 via-[#121E2C]/10 to-[#9C7A3C]/15 rounded-3xl blur-3xl -z-10 animate-ambient-glow pointer-events-none" />
 
             <div className="border border-[#E3E1DA] p-2 bg-[#FFFFFF] rounded-xs shadow-md hover:shadow-xl transition-shadow duration-300 group">
@@ -107,7 +138,7 @@ export const Hero: React.FC = () => {
                 <span className="font-mono text-[#121E2C] font-semibold">Est. 2021</span>
               </div>
             </div>
-          </div>
+          </motion.div>
 
         </div>
       </div>
