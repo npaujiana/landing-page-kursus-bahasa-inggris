@@ -16,9 +16,9 @@ export interface ProgramItem {
 
 export const siteConfig = {
   brand: {
-    name: 'NAMA BRAND',
-    fullName: 'Nama Brand',
-    shortName: 'Nama Brand',
+    name: 'ENGLISH ACADEMY',
+    fullName: 'English Academy',
+    shortName: 'English Academy',
     tagline: 'Tingkatkan Percaya Diri Berbicara Bahasa Inggris & Raih Target Skor IELTS.',
     philosophy: "English is not just a language. It's your next opportunity.",
     subTagline: 'Your English Journey Starts Here.',
@@ -29,8 +29,8 @@ export const siteConfig = {
     address: 'Ruko Emerald Avenue, BSD City, Tangerang Selatan, Banten 15345, Indonesia',
     phone: '+62 812-9000-2841',
     whatsappRaw: '6281290002841',
-    email: 'info@namabrand.example',
-    website: 'https://www.namabrand.example',
+    email: 'info@englishacademy.example',
+    website: 'https://www.englishacademy.example',
     hours: {
       weekday: 'Senin – Jumat: 08.00 – 20.00 WIB',
       saturday: 'Sabtu: 09.00 – 17.00 WIB',
@@ -38,16 +38,16 @@ export const siteConfig = {
     },
     socials: {
       instagram: {
-        handle: '@namabrand',
-        url: 'https://instagram.com/namabrand',
+        handle: '@englishacademy.id',
+        url: 'https://instagram.com/englishacademy.id',
       },
       tiktok: {
-        handle: '@namabrand',
-        url: 'https://tiktok.com/@namabrand',
+        handle: '@englishacademy.id',
+        url: 'https://tiktok.com/@englishacademy.id',
       },
       linkedin: {
-        handle: 'Nama Brand',
-        url: 'https://linkedin.com/company/nama-brand',
+        handle: 'English Academy',
+        url: 'https://linkedin.com/company/english-academy',
       },
     },
   },
@@ -156,7 +156,7 @@ export const siteConfig = {
 
 export function buildWhatsAppLink(message?: string): string {
   const defaultText =
-    'Halo Tim Admissions Nama Brand, saya ingin berkonsultasi mengenai program kursus dan jadwal diagnostic test gratis.'
+    'Halo Tim Admissions, saya ingin berkonsultasi mengenai program kursus dan jadwal diagnostic test gratis.'
   const text = encodeURIComponent(message || defaultText)
   return `https://wa.me/${siteConfig.contact.whatsappRaw}?text=${text}`
 }

@@ -36,27 +36,36 @@ export const HybridExperience: React.FC = () => {
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.6 }}
             whileHover={{ y: -3 }}
-            className="border border-[#E3E1DA] p-6 sm:p-8 bg-[#FBFBFA] rounded-xs flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow"
+            className="border border-[#E3E1DA] overflow-hidden bg-[#FBFBFA] rounded-xs flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow"
           >
-            <div>
-              <div className="text-xs font-mono text-[#9C7A3C] mb-1">Daring Nasional</div>
-              <h3 className="font-serif text-2xl text-[#121E2C] font-normal mb-3">
-                Online Interactive Classes
-              </h3>
-              <p className="text-xs sm:text-sm text-[#4A525D] leading-relaxed mb-6">
-                Kelas langsung tatap muka secara virtual (live meeting), bukan modul rekaman pasif. Peserta aktif berdiskusi, latihan presentasi, dan menerima evaluasi langsung.
-              </p>
-
-              <div className="space-y-2.5 text-xs text-[#121E2C] border-t border-[#E3E1DA] pt-4">
-                <div>• Sesi video interaktif langsung dua arah</div>
-                <div>• Akses materi digital dan bank latihan mandiri</div>
-                <div>• Pengumpulan tugas esai dan rekaman speaking terstruktur</div>
-                <div>• Fleksibel diikuti dari seluruh wilayah Indonesia</div>
-              </div>
+            <div className="h-48 overflow-hidden bg-[#121E2C]/5">
+              <img
+                src="https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?auto=format&fit=crop&w=800&q=80"
+                alt="Online Interactive English Learning"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
             </div>
+            <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <div className="text-xs font-mono text-[#9C7A3C] mb-1">Daring Nasional</div>
+                <h3 className="font-serif text-2xl text-[#121E2C] font-normal mb-3">
+                  Online Interactive Classes
+                </h3>
+                <p className="text-xs sm:text-sm text-[#4A525D] leading-relaxed mb-6">
+                  Kelas langsung tatap muka secara virtual (live meeting), bukan modul rekaman pasif. Peserta aktif berdiskusi, latihan presentasi, dan menerima evaluasi langsung.
+                </p>
 
-            <div className="pt-6 mt-6 border-t border-[#E3E1DA] text-[11px] text-[#737C87]">
-              Kebutuhan perangkat: Komputer/Laptop dan koneksi internet stabil
+                <div className="space-y-2.5 text-xs text-[#121E2C] border-t border-[#E3E1DA] pt-4">
+                  <div>• Sesi video interaktif langsung dua arah</div>
+                  <div>• Akses materi digital dan bank latihan mandiri</div>
+                  <div>• Pengumpulan tugas esai dan rekaman speaking terstruktur</div>
+                  <div>• Fleksibel diikuti dari seluruh wilayah Indonesia</div>
+                </div>
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-[#E3E1DA] text-[11px] text-[#737C87]">
+                Kebutuhan perangkat: Komputer/Laptop dan koneksi internet stabil
+              </div>
             </div>
           </motion.div>
 
@@ -67,27 +76,36 @@ export const HybridExperience: React.FC = () => {
             viewport={{ once: true, margin: '-40px' }}
             transition={{ duration: 0.6, delay: 0.15 }}
             whileHover={{ y: -3 }}
-            className="border border-[#E3E1DA] p-6 sm:p-8 bg-[#FBFBFA] rounded-xs flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow"
+            className="border border-[#E3E1DA] overflow-hidden bg-[#FBFBFA] rounded-xs flex flex-col justify-between shadow-xs hover:shadow-md transition-shadow"
           >
-            <div>
-              <div className="text-xs font-mono text-[#9C7A3C] mb-1">Tatap Muka</div>
-              <h3 className="font-serif text-2xl text-[#121E2C] font-normal mb-3">
-                BSD City Campus
-              </h3>
-              <p className="text-xs sm:text-sm text-[#4A525D] leading-relaxed mb-6">
-                Ruang belajar representatif di BSD City untuk interaksi langsung, latihan percakapan bebas hambatan teknis, serta simulasi situasi profesional tatap muka.
-              </p>
-
-              <div className="space-y-2.5 text-xs text-[#121E2C] border-t border-[#E3E1DA] pt-4">
-                <div>• Interaksi tatap muka langsung bersama pengajar</div>
-                <div>• Ruang simulasi rapat kerja dan presentasi formal</div>
-                <div>• Diskusi kelompok kecil dengan lingkungan kondusif</div>
-                <div>• Konsultasi personal tatap muka sebelum sesi kelas</div>
-              </div>
+            <div className="h-48 overflow-hidden bg-[#121E2C]/5">
+              <img
+                src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
+                alt="BSD City Campus Classroom"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+              />
             </div>
+            <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between">
+              <div>
+                <div className="text-xs font-mono text-[#9C7A3C] mb-1">Tatap Muka</div>
+                <h3 className="font-serif text-2xl text-[#121E2C] font-normal mb-3">
+                  BSD City Campus
+                </h3>
+                <p className="text-xs sm:text-sm text-[#4A525D] leading-relaxed mb-6">
+                  Ruang belajar representatif di BSD City untuk interaksi langsung, latihan percakapan bebas hambatan teknis, serta simulasi situasi profesional tatap muka.
+                </p>
 
-            <div className="pt-6 mt-6 border-t border-[#E3E1DA] text-[11px] text-[#737C87]">
-              Alamat: Ruko Emerald Avenue, BSD City, Tangerang Selatan
+                <div className="space-y-2.5 text-xs text-[#121E2C] border-t border-[#E3E1DA] pt-4">
+                  <div>• Interaksi tatap muka langsung bersama pengajar</div>
+                  <div>• Ruang simulasi rapat kerja dan presentasi formal</div>
+                  <div>• Diskusi kelompok kecil dengan lingkungan kondusif</div>
+                  <div>• Konsultasi personal tatap muka sebelum sesi kelas</div>
+                </div>
+              </div>
+
+              <div className="pt-6 mt-6 border-t border-[#E3E1DA] text-[11px] text-[#737C87]">
+                Alamat: Ruko Emerald Avenue, BSD City, Tangerang Selatan
+              </div>
             </div>
           </motion.div>
 
@@ -114,7 +132,7 @@ export const HybridExperience: React.FC = () => {
           </div>
 
           <motion.a
-            href={buildWhatsAppLink('Halo Nama Brand, saya ingin informasi konsultasi tatap muka di kampus BSD City.')}
+            href={buildWhatsAppLink('Halo Admin, saya ingin informasi konsultasi tatap muka di kampus BSD City.')}
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}

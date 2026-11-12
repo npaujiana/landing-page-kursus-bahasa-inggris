@@ -17,11 +17,13 @@ export const Footer: React.FC = () => {
           {/* Brand Info (Cols 1-5) */}
           <div className="lg:col-span-5">
             <div className="flex items-center gap-2.5 mb-3">
-              <div className="w-7 h-7 rounded-xs bg-[#121E2C] text-white font-serif font-bold text-xs flex items-center justify-center tracking-tighter">
-                NB
+              <div className="w-7 h-7 rounded-xs bg-[#121E2C] text-white flex items-center justify-center shrink-0">
+                <svg className="w-4 h-4 text-[#9C7A3C]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
               </div>
               <span className="font-serif text-lg font-bold tracking-tight text-[#121E2C]">
-                Nama Brand
+                English Academy
               </span>
             </div>
 
@@ -98,7 +100,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#737C87]">
           <div>
-            &copy; {new Date().getFullYear()} {siteConfig.brand.fullName}. All rights reserved.
+            &copy; {new Date().getFullYear()}. Hak Cipta Dilindungi.
           </div>
 
           <button

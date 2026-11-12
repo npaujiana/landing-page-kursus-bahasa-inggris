@@ -10,7 +10,7 @@ export const FloatingWhatsApp: React.FC = () => {
         transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
       >
         <motion.a
-          href={buildWhatsAppLink('Halo Nama Brand, saya ingin berkonsultasi mengenai program kursus dan jadwal kelas.')}
+          href={buildWhatsAppLink('Halo Admin, saya ingin berkonsultasi mengenai program kursus dan jadwal kelas.')}
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.05 }}

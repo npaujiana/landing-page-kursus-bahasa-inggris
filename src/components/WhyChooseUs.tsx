@@ -92,7 +92,7 @@ export const WhyChooseUs: React.FC = () => {
               &ldquo;Kemampuan Bahasa Inggris bukan sekadar penguasaan tata bahasa di atas kertas, melainkan jembatan yang menghubungkan Anda dengan peluang global selanjutnya.&rdquo;
             </p>
             <div className="text-xs text-[#CAC6BA]">
-              Adrian Pratama — Founder & Academic Director, Nama Brand
+              Adrian Pratama — Founder & Academic Director
             </div>
           </div>
 
