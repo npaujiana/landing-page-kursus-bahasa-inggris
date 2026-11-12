@@ -28,8 +28,8 @@ Landing page kursus bahasa Inggris dan persiapan IELTS (English Academy) berbasi
 
 1. Clone repositori ini:
    ```bash
-   git clone <url-repo-anda>
-   cd kursus-bahasa-inggris
+   git clone https://github.com/npaujiana/landing-page-kursus-bahasa-inggris.git
+   cd landing-page-kursus-bahasa-inggris
    ```
 
 2. Pasang dependensi:
